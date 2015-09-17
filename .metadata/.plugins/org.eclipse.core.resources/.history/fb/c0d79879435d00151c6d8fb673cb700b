@@ -1,0 +1,11 @@
+package models
+
+import models.database.Employees
+import models.database.Employees
+import scala.slick.lifted.TableQuery
+
+
+object Employee {
+  val emp = TableQuery[Employees]
+
+}

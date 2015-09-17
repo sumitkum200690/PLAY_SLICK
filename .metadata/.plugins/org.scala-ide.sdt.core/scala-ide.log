@@ -1,0 +1,11 @@
+2015-09-17 16:21:56,207  WARN [ModalContext] - ScalaProject - Project Play_DB has platform default sourceLevel.
+2015-09-17 16:21:56,210  WARN [ModalContext] - ScalaProject - Project Play_DB runs on platform default installation.
+2015-09-17 17:10:39,197 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 17:10:39,200 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 17:10:39,200 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 17:24:18,713 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 17:24:18,720 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 18:12:48,474 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 18:12:48,474 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 18:12:48,474 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-17 18:52:29,792  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.

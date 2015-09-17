@@ -1,0 +1,14 @@
+package models.database
+
+import scala.slick.model.Table
+import scala.slick.direct.AnnotationMapper.column
+import scala.slick.model.Column
+
+class Employee extends Table[(Long, String)]("Employee") {
+  def id = Column[Long]("ID")
+  def name = column[String]("NAME")
+  def dept_id = column[Long]("DEPT_ID")
+  def mgr_id = column[Long]("MGR_ID")
+  def is_manager = column[Boolean]("IS_MANAGER")
+  def * = id ~ name
+}

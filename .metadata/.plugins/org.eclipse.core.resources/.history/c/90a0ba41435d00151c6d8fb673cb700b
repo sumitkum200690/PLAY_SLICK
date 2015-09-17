@@ -1,0 +1,12 @@
+package models
+
+import models.database.Employees
+
+
+case class Employee(id: Option[Long], name: String, dept_id: Long, manager_id: Long, isManager: Boolean)
+
+object Employee {
+  
+  val emp = new Employees(Employee);
+
+}

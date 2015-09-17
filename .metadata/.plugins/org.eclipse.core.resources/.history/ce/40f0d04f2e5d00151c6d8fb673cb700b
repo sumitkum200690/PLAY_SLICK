@@ -1,0 +1,26 @@
+package models.database
+
+
+//import play.api.db.slick.Config.driver.simple._
+import scala.slick.driver.MySQLDriver.simple._
+
+import scala.slick.direct.AnnotationMapper.column
+import scala.slick.model.Table
+import scala.slick.lifted.Tag
+
+
+
+case class Employee(id: Option[Long], name: String, dept_id: Long, manager_id: Long, isManager: Boolean)
+ 
+class Employees(tag: Tag) extends Table[Employee](tag, "EMPLOYEE") {
+ 
+ //implicit val dateColumnType = MappedColumnType.base[Date, Long](d => d.getTime, d => new Date(d))
+ 
+ def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+ def name = column[String]("name")
+ def dept_id = column[Long]("dept_id")
+ def manager_id = column[Long]("manager_id")
+ def isManager = column[Boolean]("isManager")
+ 
+// def * = (id.?, name, address, dob.?, joiningDate, designation.?) <> (Employee.tupled, Employee.unapply _)
+} 

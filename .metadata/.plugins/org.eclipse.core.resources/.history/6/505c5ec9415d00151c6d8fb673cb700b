@@ -1,0 +1,7 @@
+package models
+
+case class Employee(id: Option[Long], name: String, dept_id: Long, manager_id: Long, isManager: Boolean)
+
+class Employee {
+
+}

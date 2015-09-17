@@ -1,8 +1,10 @@
 package models
 
 import play.api.Play.current
-import scala.slick.driver.MySQLDriver.simple._
 import play.api.db.DB
+import scala.slick.lifted.TableQuery
+import models.database.Employees
+import models.database.Employees
 
 case class Task(id: Int ,label: String) 
 object Task{
@@ -23,6 +25,12 @@ object Task{
       conn.close()
     }
     println("Added..")
+    
+    val table = new Employees()
+    //Query(table).list
+    
+    
+    //val setup =  DBIO.seq((Employee.schema).create)
     //Ok("outString")
   }
     
