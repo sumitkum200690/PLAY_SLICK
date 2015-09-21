@@ -11,7 +11,7 @@ object Task{
   
   def all: List[Task] = Nil
   
-  def create(label: String) {
+ /* def create(label: String) {
     println("INside Create...")
     
     val conn = DB.getConnection()
@@ -32,7 +32,7 @@ object Task{
     
     //val setup =  DBIO.seq((Employee.schema).create)
     //Ok("outString")
-  }
+  }*/
     
     
     //println(conn)

@@ -5,6 +5,7 @@ import play.api.data.Form
 import play.api.data.Forms.nonEmptyText
 import play.api.mvc.Action
 import play.api.mvc.Controller
+import models.database.EmployeeUtil
 
 object Application extends Controller {
 
@@ -20,7 +21,15 @@ object Application extends Controller {
     errors => BadRequest(views.html.index(Task.all, errors)),
     label => {
       println("In newTask..")
-      Task.create(label)
+      
+      //EmployeeUtil.setup
+     // EmployeeUtil.getAllDepartments
+      //EmployeeUtil.getAllEmployees
+      EmployeeUtil.getAllManagers
+     // EmployeeUtil.getAllReportee
+      
+      println("After setup")
+      //Task.create(label)
       Redirect(routes.Application.tasks)
     }
   )
