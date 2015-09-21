@@ -26,13 +26,43 @@ object Task{
     }
     println("Added..")
     
+    val table = new Employees()
+    //Query(table).list
     
+    
+    //val setup =  DBIO.seq((Employee.schema).create)
+    //Ok("outString")
+  }*/
+    
+    
+    //println(conn)
+    
+  //DB.withConnection {
+
+      //val task: TableQuery[Task] = TableQuery[Task]
       
+      //implicit c => c.createStatement("insert into task (label) values ({label})")
+      
+      
+    /*  
+    implicit c => SQL("insert into task (label) values ({label})").on(
+      'label -> label
+    ).executeUpdate()
+    */
     
-   
+  //}
+ 
+    /*
+  DB.withConnection("play") { conn =>
+    println("Success")
+  }
+  *
+  */
   
   
-  def delete (id: Int) {} */
+ // }
+  
+  def delete (id: Int) {}
   
   
   

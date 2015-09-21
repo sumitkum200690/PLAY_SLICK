@@ -6,8 +6,7 @@
 	
 	<h1>@tasks.size tasks </h1>
 	
-@**************************************************	
- <ul>
+ @*	<ul>
 	
 		@tasks.map { task => 
 			
@@ -23,9 +22,9 @@
 	
 	
 	
-	</ul> ***********************@
+	</ul> 
 	
-<h2><b>ALM</b></h2> 
+<h2> Add a new task</h2> 
 		@form(routes.Application.newTask){
 			@inputText(taskForm("label") )
 			<input type="submit" value="Create">
