@@ -1,0 +1,26 @@
+@(managers: List[models.DepartmentModel])
+
+@main("MANAGERS") {
+
+<table>
+  
+  @for(mgr <- managers) {
+  	
+  	
+    <tr><td><a href="/department/@dept.departmentName/@dept.id"> &nbsp;&nbsp;@dept.departmentName </a></td></tr>
+    
+    
+    
+    
+   
+    
+    
+   
+    
+    
+  }
+  </table>
+
+
+
+}

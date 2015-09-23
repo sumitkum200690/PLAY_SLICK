@@ -1,0 +1,45 @@
+@(tasks: List[Task],taskForm: Form[String])
+
+@import helper._
+@main("ye title hai ") {
+	
+
+	
+
+		
+		
+		
+  <ol>
+  <li><a href="@routes.Application.allManagers">List Of ALL Managers</a></li>
+  
+  
+  
+  
+  <li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

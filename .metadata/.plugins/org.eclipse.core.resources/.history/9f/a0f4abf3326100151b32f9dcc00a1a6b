@@ -1,0 +1,13 @@
+@(empDesciprion: List[models.EmployeeModel])
+
+@main("EMPLOYEE DESCRIPTION") {
+
+<table>
+  
+  for(emp <- empDesciprion) {
+
+	<tr><td><a href="/reporteeDescription/@emp.name/@emp.id">@emp.name</a></td></tr>  
+  }
+  </table>
+
+}

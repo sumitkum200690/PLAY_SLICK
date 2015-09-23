@@ -1,0 +1,24 @@
+@(departments:List[models.DepartmentModel])
+
+
+@main("ALM-DEPARTMENTS") {
+
+
+
+<table>
+  <tr><th>ID</th><th>NAME</th></tr>
+  @for(dept <- departments) {
+    <tr><td>@dept.id</td><td>@dept.departmentName</td></tr>
+    
+    
+    <ol>
+    <li></li> 
+    
+    </ol>
+    
+    
+  }
+  </table>
+
+
+}

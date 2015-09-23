@@ -1,0 +1,71 @@
+package controllers
+
+import models.database.DBUtils
+import play.api.data.Form
+import play.api.data.Forms.nonEmptyText
+import play.api.mvc.Action
+import play.api.mvc.Controller
+import play.api.Logger
+
+object Application extends Controller {
+
+  def index = Action {
+    Ok(views.html.index())
+  }
+                                         /* we use TODO to define our action implementations. Because we don’t 
+                                         want to write the action implementations yet, we can use the built-in TODO 
+                                         action that will return a 501 Not Implemented HTTP response. */
+  def allManagers = Action { 
+                                          /*
+                                          implicit request =>
+                                        taskForm.bindFromRequest.fold(
+                                          errors => BadRequest(views.html.index(Task.all, errors)),
+                                          label => { */
+      println("In allManagers..")
+      
+      
+      //EmployeeUtil.getAllManagers
+                                        //EmployeeUtil.setup
+      DBUtils.getAllManagers                                   // EmployeeUtil.getAllDepartments
+                                          //EmployeeUtil.getAllEmployees
+                                         // EmployeeUtil.getAllReportee
+      println("After setup")
+     Ok(views.html.managerPage())
+    }
+  
+  def allDepartments = Action {
+    
+    println("In allDepartments ")
+    
+    //val deptList=DBUtils.getAllDepartments
+    val deptList= DBUtils.getAllDepartments
+    
+    
+    
+    
+     deptList.foreach(d => println(d.id+" "+d.departmentName))
+    
+     
+     
+    Logger.debug(deptList.mkString("\n"))
+    //Ok(views.html.query(deptList))
+     
+     
+     
+     
+    Ok(views.html.allDepartmentPage(deptList: List[(Long,String)]))
+  }
+  
+  
+  
+  
+  val taskForm = Form("label" -> nonEmptyText)
+                                           // )
+  
+  def allEmployees = Action {
+    
+      DBUtils.getAllEmployees
+      Redirect(routes.Application.index)
+    
+  }
+}

@@ -3,12 +3,31 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET   /                           							controllers.Application.index
+
+GET   /AlmIndex												controllers.Application.index
+
+GET   /AllManagers                							controllers.Application.allManagers
 
 
-GET     /tasks                  controllers.Application.tasks
-POST    /tasks                  controllers.Application.newTask
-#POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Int)
-GET    /tasks/:id/delete       controllers.Application.deleteTask(id: Int)
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET   /DepartmentWiseManager/:departmentName/:id			controllers.Application.managerByDepartment(departmentName: String, id: String)
+
+
+GET   /reporteeDescription/:name/:id						controllers.Application.employeeById(name,id)
+
+
+
+
+
+GET   /AllDepartments             							controllers.Application.allDepartments
+
+
+GET   /Reportees/:id			 							controllers.Application.allReportee(id)
+
+GET   /AllEmployees               							controllers.Application.allEmployees
+
+GET   /department/:deptName/:id   							controllers.Application.managerByDepartment(deptName, id)
+
+
+
+#GET     /assets/*file               controllers.Assets.at(path="/public", file)

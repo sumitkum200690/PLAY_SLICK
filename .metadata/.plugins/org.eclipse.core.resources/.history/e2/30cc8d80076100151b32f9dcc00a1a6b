@@ -1,0 +1,24 @@
+@(departments:List[models.DepartmentModel])
+
+
+@main("ALM-DEPARTMENTS") {
+
+
+
+<table>
+  
+  @for(dept <- departments) {
+    <tr><td><a href="@routes.Application.allManagers"> @dept.id </a></td> &nbsp;&nbsp; <td>@dept.departmentName</td>
+    
+    
+   
+    
+    
+   
+    </tr>
+    
+  }
+  </table>
+
+
+}

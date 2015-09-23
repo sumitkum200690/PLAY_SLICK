@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+
+
+GET    /AllManagers                  controllers.Application.allManagers
+
+
+GET    /AllDepartments				controllers.Application.allDepartments
+
+GET    /AllEmployees				controllers.Application.allEmployees
+
+GET /department/:id controllers.Application.managerByDepartment(id)
+
+
+
+#GET     /assets/*file               controllers.Assets.at(path="/public", file)

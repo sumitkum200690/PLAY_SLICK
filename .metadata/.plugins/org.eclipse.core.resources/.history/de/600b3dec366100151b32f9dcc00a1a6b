@@ -1,0 +1,18 @@
+@(empDesciprion: List[models.EmployeeModel])
+
+		
+		
+			@main("EMPLOYEE DESCRIPTION") {
+			
+			<table>
+			  
+			  @for(employee <- empDesciprion) {
+			
+				<th><tr><td></td></tr></th>
+			
+				<tr><td>@employee.id</td><td> @employee.name</td></tr> 
+				
+			 }
+			  </table>
+			
+			}

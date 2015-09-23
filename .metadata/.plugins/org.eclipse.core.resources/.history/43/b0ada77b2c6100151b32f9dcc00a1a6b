@@ -1,0 +1,144 @@
+package models.database
+
+import scala.slick.driver.MySQLDriver.simple._
+import scala.slick.lifted.{ ProvenShape, ForeignKeyQuery }
+import play.api.db.DB
+import play.api.Play.current
+import models._
+
+// DEPARTMENT TABLE CREATION 
+class Departments(tag: Tag) extends Table[(Long, String)](tag, "DEPARTMENT") {
+
+  def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+  def name = column[String]("name")
+
+  def * = (id, name)
+}
+
+// Employees TABLE CREATION with foreignKey 
+class Employees(tag: Tag) extends Table[(Long, String, Long, Boolean)](tag, "EMPLOYEE") {
+
+  println("Inside Employees class....")
+
+  def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+  def name = column[String]("name")
+  def dept_id = column[Long]("dept_id")
+  def isManager = column[Boolean]("isManager")
+  def * = (id, name, dept_id, isManager)
+
+  def departments = foreignKey("DEPT_FK", dept_id, TableQuery[Departments])(_.id)
+}
+
+// Manager Table creation with foreignKeys(as 's' is coming so multiple :P )
+
+//case class Manager(id: Option[Long], emp_id: Long, dept_id: Long, reportee_id: Long)
+
+class Managers(tag: Tag) extends Table[(Long, Long, Long)](tag, "MANAGER") {
+
+  def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+  def emp_id = column[Long]("emp_id")
+  def reportee_id = column[Long]("reportee_id")
+  //def * = (id.?, emp_id, dept_id, reportee_id) <> (Manager.tupled, Manager.unapply _) previous version of slick
+
+  def * = (id, emp_id, reportee_id)
+
+  def employees_emp_id = foreignKey("EMP-ID_FK", emp_id, TableQuery[Employees])(_.id)
+  def employees_dept_id = foreignKey("DEPT-ID_FK", reportee_id, TableQuery[Employees])(_.id)
+}
+
+object DBUtils {
+
+  def setup {
+
+    val department = TableQuery[Departments]
+    val employee = TableQuery[Employees]
+    val manager = TableQuery[Managers]
+
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+        (department.ddl).create
+        (employee.ddl).create
+        (manager.ddl).create
+    }
+  }
+
+  def getAllDepartments: List[models.DepartmentModel] = {
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+
+        val departments = TableQuery[Departments]
+        val departmentDetails = departments.run.toList.map(dept => new DepartmentModel(dept._1, dept._2))
+        departmentDetails
+    }
+  }
+
+  def getAllEmployees: List[models.EmployeeModel] = {
+
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+        val employees = TableQuery[Employees]
+        val employeeDetails = employees.run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4))
+        employeeDetails
+    }
+  }
+
+  def getAllManagers: List[models.EmployeeModel] = {
+
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+        val managers = TableQuery[Managers]
+        val employees = TableQuery[Employees]
+
+        val allManagers = managers.run.toList
+        val managerDetails = employees.filter(_.id inSet (allManagers.map(m => m._2))).run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,_))
+        managerDetails
+    }
+  }
+
+  def getAllReportee(managerId: String): List[models.EmployeeModel] = {
+
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+        val managers = TableQuery[Managers]
+        val employees = TableQuery[Employees]
+
+        val allReportees: List[(Long, Long, Long)] = managers.filter(_.emp_id inSet (Set(managerId.toLong))).run.toList
+
+        val reporteesDetails = employees.filter(_.id inSet (allReportees.map(r => r._3))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4," "))
+
+        reporteesDetails
+    }
+  }
+
+  def getManagerByDepartment(deptName: String, deptId: String): List[models.EmployeeModel] = {
+
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+
+        val managers = TableQuery[Managers]
+        val employees = TableQuery[Employees]
+
+        val managersByDept = employees.filter(e => (e.dept_id inSet Set(deptId.toLong))).filter(_.isManager).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4," "))
+
+        managersByDept
+    }
+  }
+
+  
+  /*
+  def getEmployeeById(empName: String, empId: String): List[models.EmployeeModel] = {
+
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+
+        val dept = TableQuery[Departments]
+        val employees = TableQuery[Employees]
+
+        val empWithDept = employees.filter(e => (e.dept_id inSet Set(deptId.toLong))).filter(_.isManager).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4))
+
+        empWithDept
+    }
+  }
+  */
+
+}

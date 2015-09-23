@@ -1,0 +1,44 @@
+
+
+
+@main("ALM SCALA") {
+	
+
+	
+
+		
+		
+  <ol>
+  <li><a href="@routes.Application.allManagers"><h2>List Of ALL Managers</h2></a></li>
+  
+  
+  
+  
+  <li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

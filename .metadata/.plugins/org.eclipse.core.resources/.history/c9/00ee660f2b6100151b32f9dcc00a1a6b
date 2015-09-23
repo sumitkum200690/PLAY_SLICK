@@ -1,0 +1,9 @@
+
+
+package models
+
+import models.database.Employees
+import models.DepartmentModel
+
+class EmployeeModel(val id: Long, val name:String, val departmentId: models.DepartmentModel., val isManager : Boolean )
+

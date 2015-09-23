@@ -57,3 +57,114 @@
 2015-09-21 13:05:09,310 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
 2015-09-21 13:05:09,310 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
 2015-09-21 13:05:09,310 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-21 18:20:57,665 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+scala.tools.nsc.interactive.FreshRunReq
+2015-09-21 18:20:57,675 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Incorrectly logged ControlThrowable: FreshRunReq(null)
+scala.tools.nsc.interactive.FreshRunReq
+2015-09-21 18:20:57,814  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-21 18:47:02,989  WARN [ModalContext] - ScalaProject - Project PlaynSlick has platform default sourceLevel.
+2015-09-21 18:47:02,989  WARN [ModalContext] - ScalaProject - Project PlaynSlick runs on platform default installation.
+2015-09-21 19:03:45,726 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-21 19:03:45,726 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-21 19:03:45,726 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-21 19:14:08,782 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-21 19:14:08,797 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-21 19:14:08,797 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 11:46:04,201  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for Play_DB, setting default to 2.11.
+2015-09-22 11:46:04,206  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for Play_DB, setting default to 2.11.
+2015-09-22 11:59:47,096  WARN [ModalContext] - ScalaProject - Project PlaySlickDemo has platform default sourceLevel.
+2015-09-22 11:59:47,098  WARN [ModalContext] - ScalaProject - Project PlaySlickDemo runs on platform default installation.
+2015-09-22 12:03:36,357  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 12:04:55,842 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+scala.tools.nsc.interactive.FreshRunReq
+2015-09-22 12:04:55,852 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Incorrectly logged ControlThrowable: FreshRunReq(null)
+scala.tools.nsc.interactive.FreshRunReq
+2015-09-22 12:04:56,116  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 12:09:10,788 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - System.err - Exception in thread "org.scalaide.ui.internal.reconciliation.ScalaReconciler"
+2015-09-22 12:09:10,788 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - System.err - java.lang.NullPointerException
+2015-09-22 12:09:10,788 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - System.err - at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.initialReconcile(ScalaReconcilingStrategy.scala:63)
+2015-09-22 12:09:10,788 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - System.err - at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+2015-09-22 12:09:10,788 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - System.err - at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+2015-09-22 12:09:10,788 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - System.err - at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+2015-09-22 12:24:15,767 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 12:24:15,782 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 12:24:15,782 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 12:24:15,782 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 12:45:19,526  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - Exception in thread "Text Viewer Hover Presenter"
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - java.lang.InterruptedException
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at java.lang.Object.wait(Native Method)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at java.lang.Object.wait(Unknown Source)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at scala.tools.nsc.interactive.Response.get(Response.scala:56)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$TreeCreationMethods$class.treeFrom(TwirlCompiler.scala:520)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$PresentationCompiler$.treeFrom(TwirlCompiler.scala:527)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$TreeCreationMethods$class.treeFrom(TwirlCompiler.scala:513)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$PresentationCompiler$.treeFrom(TwirlCompiler.scala:527)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$.getFunctionMapping(TwirlCompiler.scala:409)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.generateCode(TwirlCompiler.scala:321)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.generateFinalTemplate(TwirlCompiler.scala:359)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.parseAndGenerateCodeNewParser(TwirlCompiler.scala:208)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.parseAndGenerateCode(TwirlCompiler.scala:179)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.compileVirtual(TwirlCompiler.scala:170)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.compiler.CompilerUsing$$anonfun$compileTemplateToScalaVirtual$3.apply(CompilerUsing.scala:44)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.compiler.CompilerUsing$$anonfun$compileTemplateToScalaVirtual$3.apply(CompilerUsing.scala:44)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at scala.util.Try$.apply(Try.scala:191)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.compiler.CompilerUsing$.compileTemplateToScalaVirtual(CompilerUsing.scala:43)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.generatedSource$lzycompute(TemplateCompilationUnit.scala:134)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.generatedSource(TemplateCompilationUnit.scala:132)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.scalaSource(TemplateCompilationUnit.scala:139)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.<init>(TemplateCompilationUnit.scala:173)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit.sourceMap(TemplateCompilationUnit.scala:89)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit.lastSourceMap(TemplateCompilationUnit.scala:84)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit.lastSourceMap(TemplateCompilationUnit.scala:45)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.compiler.InteractiveCompilationUnit$$anonfun$withSourceFile$1.apply(InteractiveCompilationUnit.scala:202)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.compiler.InteractiveCompilationUnit$$anonfun$withSourceFile$1.apply(InteractiveCompilationUnit.scala:202)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy$$anonfun$internal$1.apply(PresentationCompilerProxy.scala:105)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy$$anonfun$internal$1.apply(PresentationCompilerProxy.scala:104)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at scala.Option.flatMap(Option.scala:171)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:104)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:62)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.compiler.InteractiveCompilationUnit$class.withSourceFile(InteractiveCompilationUnit.scala:202)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.editor.CompilationUnit.withSourceFile(CompilationUnit.scala:10)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl$$anonfun$1.apply(ScalaHoverImpl.scala:111)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl$$anonfun$1.apply(ScalaHoverImpl.scala:109)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at scala.Option.map(Option.scala:146)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:109)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:139)
+2015-09-22 12:58:03,489 ERROR [Text Viewer Hover Presenter] - System.err - at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+2015-09-22 15:27:35,026  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 15:29:58,877  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 15:31:55,156 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 15:31:55,156 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 15:31:55,156 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 15:42:59,188 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 15:42:59,188 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 15:42:59,188 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 15:58:56,873  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 16:10:28,719  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 18:20:58,400  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 18:30:21,711  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 18:46:16,422 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 18:46:16,422 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 18:46:16,422 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 18:50:58,676 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 18:50:58,676 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 18:50:58,676 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 18:51:09,083  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 18:54:09,809  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 18:54:37,575  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 19:11:42,149 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 19:11:42,149 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 19:11:42,149 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 19:53:14,501  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 19:53:14,501  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-09-22 20:23:33,504 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 20:23:33,504 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 20:23:33,504 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 20:24:10,404 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 20:24:10,404 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 20:24:10,404 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-22 20:57:42,264  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for Play_DB, setting default to 2.11.
+2015-09-22 20:57:42,264  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for Play_DB, setting default to 2.11.
+2015-09-23 11:10:46,677  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for PlaySlickDemo, setting default to 2.11.
+2015-09-23 11:10:46,677  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for PlaySlickDemo, setting default to 2.11.

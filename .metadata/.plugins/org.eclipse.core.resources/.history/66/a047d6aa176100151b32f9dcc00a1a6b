@@ -1,0 +1,26 @@
+@(managers: List[models.EmployeeModel])
+
+@main("MANAGERS") {
+
+<table>
+  
+  @for(mgr <- managers) {
+  	
+  	
+   
+    
+    
+<tr><td>mgr.name</td></tr>
+    
+   
+    
+    
+   
+    
+    
+  }
+  </table>
+
+
+
+}

@@ -1,0 +1,48 @@
+@(tasks: List[Task],taskForm: Form[String])
+
+@import helper._
+@main("ye title hai ") {
+	
+	
+@*	 <h1>@tasks.size tasks </h1> *@
+	
+	
+@* <ul> *@
+	
+@*		@tasks.map { task =>*@ 
+			
+	@*		<li> *@
+		@*		@task.label *@
+			@*	@form(routes.Application.deleteTask(task.id)){ *@
+				@*	<input type="submit" value="Delete"> *@
+		@*		}
+			
+		@*	</li> *@
+		
+		@*	} *@	
+	
+	
+@*	</ul> *@
+	
+<h2><b>ALM-SCALA</b></h2> 
+		@form(routes.Application.newTask){
+		@*	@inputText(taskForm("label")) *@
+			<h2><b> Want to get the List of manager <input type="submit" value="click me" style="height:50px; border-radius:40px/24px; width:100px; background-color:cyan" >
+			
+			
+	  	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
