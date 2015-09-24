@@ -13,7 +13,7 @@ GET   /AllManagers                							controllers.Application.allManagers
 GET   /DepartmentWiseManager/:departmentName/:id			controllers.Application.managerByDepartment(departmentName: String, id: String)
 
 
-GET   /reporteeDescription/:name/:id						controllers.Application.employeeById(name,id)
+GET   /reporteeDescription/:id/:departmentId						controllers.Application.employeeById(id,departmentId)
 
 
 
@@ -30,4 +30,5 @@ GET   /department/:deptName/:id   							controllers.Application.managerByDepart
 
 
 
-#GET     /assets/*file               controllers.Assets.at(path="/public", file)
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

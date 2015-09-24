@@ -1,0 +1,12 @@
+object MyTest {
+  println("Welcome to the Scala worksheet")
+  
+  
+  val list1 = List(1,2,789)
+  
+  list1.foreach(println)
+  list1.filter(_ > 2)
+
+val list2 = List((1,2,789))
+  list2.filter(_(0)._2 > 2)
+}

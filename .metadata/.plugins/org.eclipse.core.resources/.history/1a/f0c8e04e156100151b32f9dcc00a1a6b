@@ -1,9 +1,0 @@
-@(managers:List[models.DepartmentModel])
-
-@main("MANAGERS") {
-
-
-
-
-
-}

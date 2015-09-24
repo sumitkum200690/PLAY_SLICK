@@ -1,0 +1,16 @@
+object MyTest {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  
+  val list1 = List(1,"ALM",2,"PTPorta")           //> list1  : List[Any] = List(1, ALM, 2, PTPorta)
+  
+  list1.foreach(println)                          //> 1
+                                                  //| ALM
+                                                  //| 2
+                                                  //| PTPorta
+  list1.foreach(println _)                        //> 1
+                                                  //| ALM
+                                                  //| 2
+                                                  //| PTPorta
+  
+}

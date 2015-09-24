@@ -1,0 +1,10 @@
+object MyTest {
+  println("Welcome to the Scala worksheet")
+  
+  
+  val list1 = List(1,2,789)
+  
+  list1.foreach(println)
+  list1.foreach(println _.1)
+  
+}

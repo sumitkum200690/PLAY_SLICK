@@ -1,0 +1,6 @@
+object MyTest {
+  println("Welcome to the Scala worksheet")
+  
+  
+  
+}

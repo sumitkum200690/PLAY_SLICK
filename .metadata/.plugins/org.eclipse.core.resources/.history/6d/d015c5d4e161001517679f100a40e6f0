@@ -1,0 +1,51 @@
+@(managers: List[models.EmployeeModel])
+
+@main("MANAGERS") {
+					<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+<body style="height:100%">
+
+<div id="nav">
+<a href="/"><h3><b><I>Home</I></b></a>
+
+
+</div>
+
+<div id="section">
+				
+				
+				  
+				  </table>
+
+</div>
+
+<div id="footer">
+Copyright © ALM-TEAM
+</div>
+}

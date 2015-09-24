@@ -61,9 +61,9 @@ object Application extends Controller {
     Ok(views.html.managerPage(mbydept:List[models.EmployeeModel]))
   }
   
-  def employeeById(name:String, id:String) = Action{
+  def employeeById(id:String, deptId:String) = Action{
     
-    val empDesc = DBUtils.getEmployeeById(name, id)
+    val empDesc = DBUtils.getEmployeeDetails(id, deptId)
     
     Ok(views.html.employeeByIdDescription(empDesc: List[models.EmployeeModel]))
   }

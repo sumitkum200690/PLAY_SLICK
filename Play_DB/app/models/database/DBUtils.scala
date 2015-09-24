@@ -88,8 +88,17 @@ object DBUtils {
       implicit session =>
         val employees = TableQuery[Employees]
 
+        val departments = TableQuery[Departments]
+      // val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run
+       val selectedDept =  departments.run.toList
+       println(selectedDept(2)._2)
         
-        val employeeDetails = employees.run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4))
+      val allDepartments = departments.run.toList
+
+
+
+        
+        val employeeDetails = employees.run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,allDepartments.filter(_._1 == emp._3)(0)._2))
         employeeDetails
         
         
@@ -109,7 +118,7 @@ object DBUtils {
         println("\n\n####### Managers #######")
 
         val allManagers = managers.run.toList
-        val managerDetails = employees.filter(_.id inSet (allManagers.map(m => m._2))).run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4))
+        val managerDetails = employees.filter(_.id inSet (allManagers.map(m => m._2))).run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,"depat ka name next version me dalenge boss"))
         managerDetails
 
       // managers.foreach(m => if(m._4) println(m._2 +" "+ m._4))
@@ -130,7 +139,7 @@ object DBUtils {
 
         val allReportees: List[(Long, Long, Long)] = managers.filter(_.emp_id inSet (Set(managerId.toLong))).run.toList
 
-        val reporteesDetails = employees.filter(_.id inSet (allReportees.map(r => r._3))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4))
+        val reporteesDetails = employees.filter(_.id inSet (allReportees.map(r => r._3))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4,"depat ka name next version me dalenge boss"))
 
         reporteesDetails
 
@@ -145,8 +154,11 @@ object DBUtils {
 
         val managers = TableQuery[Managers]
         val employees = TableQuery[Employees]
+        
+       /* val departments = TableQuery[Departments]
+       val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run*/
 
-        val managersByDept = employees.filter(e => (e.dept_id inSet Set(deptId.toLong))).filter(_.isManager).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4))
+        val managersByDept = employees.filter(e => (e.dept_id inSet Set(deptId.toLong))).filter(_.isManager).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4,"depat ka name next version me dalenge boss"))
 
         managersByDept
     }
@@ -154,7 +166,7 @@ object DBUtils {
   
   
 
-  def getEmployeeById(empName: String, empId: String): List[models.EmployeeModel] = {
+ /* def getEmployeeById(empName: String, empId: String): List[models.EmployeeModel] = {
 
     Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
@@ -165,6 +177,26 @@ object DBUtils {
         var empById = employees.filter(e => (e.id inSet Set(empId.toLong))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4))
        empById
     }
+  }*/
+  
+  
+  def getEmployeeDetails(empId: String, deptId:String): List[models.EmployeeModel] = {
+    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+      implicit session =>
+        
+        println("empId:"+empId+", length:"+empId.length())
+        
+        val employees = TableQuery[Employees]
+        val departments = TableQuery[Departments]
+       val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run.toList
+       println("DEPT : "+selectedDept(0)._2)
+       val empDeptDetail = employees.filter( e =>  (e.id inSet Set(empId.toLong))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4, selectedDept(0)._2))
+       println(empDeptDetail)
+       empDeptDetail
+    }
   }
+
+  
+  
 
 }
