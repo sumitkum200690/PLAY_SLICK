@@ -19,7 +19,7 @@ class Departments(tag: Tag) extends Table[(Long, String)](tag, "DEPARTMENT") {
 }
 
 // Employees TABLE CREATION with foreignKey 
-class Employees(tag: Tag) extends Table[(Long, String, Long, Boolean)](tag, "EMPLOYEE") {
+class Employees(tag: Tag) extends Table[(Long, String, Long, Boolean, String, String, Long, String)](tag, "EMPLOYEE") {
 
   println("Inside Employees class....")
 
@@ -27,7 +27,12 @@ class Employees(tag: Tag) extends Table[(Long, String, Long, Boolean)](tag, "EMP
   def name = column[String]("name")
   def dept_id = column[Long]("dept_id")
   def isManager = column[Boolean]("isManager")
-  def * = (id, name, dept_id, isManager)
+  def current_project = column[String]("current_project")
+  def email = column[String]("email")
+  def contact_number = column[Long]("contact_number")
+  def location = column[String]("location")
+  
+  def * = (id, name, dept_id, isManager,current_project,email,contact_number,location)
 
   def departments = foreignKey("DEPT_FK", dept_id, TableQuery[Departments])(_.id)
 }
@@ -57,7 +62,7 @@ object DBUtils {
     val employee = TableQuery[Employees]
     val manager = TableQuery[Managers]
 
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         (department.ddl).create
         (employee.ddl).create
@@ -66,7 +71,7 @@ object DBUtils {
   }
 
   def getAllDepartments: List[models.DepartmentModel] = {
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         //       val departments = TableQuery[Departments]
@@ -84,9 +89,11 @@ object DBUtils {
 
   def getAllEmployees: List[models.EmployeeModel] = {
 
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         val employees = TableQuery[Employees]
+        
+        
 
         val departments = TableQuery[Departments]
       // val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run
@@ -98,7 +105,7 @@ object DBUtils {
 
 
         
-        val employeeDetails = employees.run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,allDepartments.filter(_._1 == emp._3)(0)._2))
+        val employeeDetails = employees.run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,allDepartments.filter(_._1 == emp._3)(0)._2, emp._5, emp._6, emp._7, emp._8 ))
         employeeDetails
         
         
@@ -111,14 +118,14 @@ object DBUtils {
   }
   def getAllManagers: List[models.EmployeeModel] = {
 
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         val managers = TableQuery[Managers]
         val employees = TableQuery[Employees]
         println("\n\n####### Managers #######")
 
         val allManagers = managers.run.toList
-        val managerDetails = employees.filter(_.id inSet (allManagers.map(m => m._2))).run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,"depat ka name next version me dalenge boss"))
+        val managerDetails = employees.filter(_.id inSet (allManagers.map(m => m._2))).run.toList.map(emp => new models.EmployeeModel(emp._1, emp._2, emp._3, emp._4,"dept_name", emp._5, emp._6, emp._7, emp._8))
         managerDetails
 
       // managers.foreach(m => if(m._4) println(m._2 +" "+ m._4))
@@ -127,7 +134,7 @@ object DBUtils {
 
   def getAllReportee(managerId: String): List[models.EmployeeModel] = {
 
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         //val employee_who_is_reporting=TableQuery[Employees]
@@ -139,7 +146,7 @@ object DBUtils {
 
         val allReportees: List[(Long, Long, Long)] = managers.filter(_.emp_id inSet (Set(managerId.toLong))).run.toList
 
-        val reporteesDetails = employees.filter(_.id inSet (allReportees.map(r => r._3))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4,"depat ka name next version me dalenge boss"))
+        val reporteesDetails = employees.filter(_.id inSet (allReportees.map(r => r._3))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4,"dept_name", emp._5, emp._6, emp._7, emp._8))
 
         reporteesDetails
 
@@ -149,16 +156,16 @@ object DBUtils {
   
   def getManagerByDepartment(deptName: String, deptId: String): List[models.EmployeeModel] = {
 
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         val managers = TableQuery[Managers]
         val employees = TableQuery[Employees]
         
-       /* val departments = TableQuery[Departments]
-       val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run*/
+        val departments = TableQuery[Departments]
+       val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run
 
-        val managersByDept = employees.filter(e => (e.dept_id inSet Set(deptId.toLong))).filter(_.isManager).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4,"depat ka name next version me dalenge boss"))
+        val managersByDept = employees.filter(e => (e.dept_id inSet Set(deptId.toLong))).filter(_.isManager).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4,"dept_name", emp._5, emp._6, emp._7, emp._8))
 
         managersByDept
     }
@@ -166,7 +173,7 @@ object DBUtils {
   
   
 
- /* def getEmployeeById(empName: String, empId: String): List[models.EmployeeModel] = {
+  /*def getEmployeeById(empName: String, empId: String): List[models.EmployeeModel] = {
 
     Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
@@ -181,7 +188,7 @@ object DBUtils {
   
   
   def getEmployeeDetails(empId: String, deptId:String): List[models.EmployeeModel] = {
-    Database.forURL("jdbc:mysql://localhost/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost/play1", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         
         println("empId:"+empId+", length:"+empId.length())
@@ -190,7 +197,7 @@ object DBUtils {
         val departments = TableQuery[Departments]
        val selectedDept =  departments.filter(d=>d.id inSet (Set(deptId.toLong))).run.toList
        println("DEPT : "+selectedDept(0)._2)
-       val empDeptDetail = employees.filter( e =>  (e.id inSet Set(empId.toLong))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4, selectedDept(0)._2))
+       val empDeptDetail = employees.filter( e =>  (e.id inSet Set(empId.toLong))).run.toList.map(emp => new EmployeeModel(emp._1, emp._2, emp._3, emp._4, selectedDept(0)._2, emp._5,emp._6, emp._7,emp._8))
        println(empDeptDetail)
        empDeptDetail
     }

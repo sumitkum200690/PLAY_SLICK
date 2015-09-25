@@ -1,0 +1,13 @@
+
+
+package models
+
+class EmployeeModel(val id: Long, val name: String, val departmentId: Long, val isManager: Boolean,
+                    val departmentName: String, current_project: String, email: String, contact_number: Long, location: String)
+                    
+                    
+                    
+
+
+
+

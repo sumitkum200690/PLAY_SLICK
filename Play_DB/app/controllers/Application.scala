@@ -12,6 +12,10 @@ import models.DepartmentModel
 object Application extends Controller {
 
   def index = Action {
+    
+    //DBUtils.setup
+    
+    
     Ok(views.html.index())
   }
                                          
@@ -19,8 +23,8 @@ object Application extends Controller {
                                           
       println("In allManagers..")
       
-     val managers= DBUtils.getAllManagers           
-      
+     val managers= DBUtils.getAllManagers    
+     
      //Logger.debug(managers.mkString("\n"))
 
      

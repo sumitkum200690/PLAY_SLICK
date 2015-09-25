@@ -6,16 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ReporteeDescriptio" key="selection"/>
+		<item value="play" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="play"/>
+			<item value="nav"/>
+			<item value="#nav"/>
+			<item value="home"/>
+			<item value="overflow"/>
 			<item value="reporteeDescriptio"/>
 			<item value="ManagerModel"/>
 			<item value="TableQuery[Employees]"/>
-			<item value="produ"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +28,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="380" key="DIALOG_HEIGHT"/>
-		<item value="456" key="DIALOG_X_ORIGIN"/>
-		<item value="167" key="DIALOG_Y_ORIGIN"/>
+		<item value="898" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

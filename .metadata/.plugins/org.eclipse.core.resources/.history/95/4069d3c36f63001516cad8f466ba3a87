@@ -1,0 +1,28 @@
+@(departments:List[models.DepartmentModel])
+
+
+@main("ALM-DEPARTMENTS") {
+
+
+
+<table>
+  
+  @for(dept <- departments) {
+  	
+  	
+    <tr><td><a href="/DepartmentWiseManager/@dept.departmentName/@dept.id">@dept.departmentName</a></td></tr>
+    
+    
+    
+    
+   
+    
+    
+   
+    
+    
+  }
+  </table>
+
+
+}

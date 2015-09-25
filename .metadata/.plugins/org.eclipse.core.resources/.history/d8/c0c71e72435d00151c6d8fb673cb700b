@@ -1,9 +1,0 @@
-package models
-
-import models.database.Employees
-
-
-object Employee {
-  
-
-}

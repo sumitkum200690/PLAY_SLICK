@@ -1,0 +1,34 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET   /                           							controllers.Application.index
+
+GET   /AlmIndex												controllers.Application.index
+
+GET   /AllManagers                							controllers.Application.allManagers
+
+
+GET   /DepartmentWiseManager/:departmentName/:id			controllers.Application.managerByDepartment(departmentName: String, id: String)
+
+
+GET   /reporteeDescription/:id/:departmentId						controllers.Application.employeeById(id,departmentId)
+
+
+
+
+
+GET   /AllDepartments             							controllers.Application.allDepartments
+
+
+GET   /Reportees/:id			 							controllers.Application.allReportee(id)
+
+GET   /AllEmployees               							controllers.Application.allEmployees
+
+GET   /department/:deptName/:id   							controllers.Application.managerByDepartment(deptName, id)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
