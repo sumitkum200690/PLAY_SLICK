@@ -576,3 +576,52 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException
 2015-09-25 15:31:31,963 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:109)
 2015-09-25 15:31:31,963 ERROR [Text Viewer Hover Presenter] - System.err - at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:139)
 2015-09-25 15:31:31,963 ERROR [Text Viewer Hover Presenter] - System.err - at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+2015-09-28 11:11:59,614  WARN [Worker-0] - ScalaProject - Project PlaySlickDemo has platform default sourceLevel.
+2015-09-28 11:11:59,616  WARN [Worker-0] - ScalaProject - Project PlaySlickDemo runs on platform default installation.
+2015-09-28 11:13:14,185  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for Play_DB, setting default to 2.11.
+2015-09-28 11:13:14,188  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for Play_DB, setting default to 2.11.
+2015-09-28 11:30:01,969 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-28 11:30:01,969 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-28 11:30:01,969 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-09-28 11:52:38,958 ERROR [Text Viewer Hover Presenter] - System.err - Exception in thread "Text Viewer Hover Presenter"
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - java.lang.InterruptedException
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at java.lang.Object.wait(Native Method)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at java.lang.Object.wait(Unknown Source)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at scala.tools.nsc.interactive.Response.get(Response.scala:56)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$TreeCreationMethods$class.treeFrom(TwirlCompiler.scala:520)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$PresentationCompiler$.treeFrom(TwirlCompiler.scala:527)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$TreeCreationMethods$class.treeFrom(TwirlCompiler.scala:513)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$PresentationCompiler$.treeFrom(TwirlCompiler.scala:527)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$TemplateAsFunctionCompiler$.getFunctionMapping(TwirlCompiler.scala:409)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.generateCode(TwirlCompiler.scala:321)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.generateFinalTemplate(TwirlCompiler.scala:359)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.parseAndGenerateCodeNewParser(TwirlCompiler.scala:208)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.parseAndGenerateCode(TwirlCompiler.scala:179)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at play.twirl.compiler.TwirlCompiler$.compileVirtual(TwirlCompiler.scala:170)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.compiler.CompilerUsing$$anonfun$compileTemplateToScalaVirtual$3.apply(CompilerUsing.scala:44)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.compiler.CompilerUsing$$anonfun$compileTemplateToScalaVirtual$3.apply(CompilerUsing.scala:44)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at scala.util.Try$.apply(Try.scala:191)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.compiler.CompilerUsing$.compileTemplateToScalaVirtual(CompilerUsing.scala:43)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.generatedSource$lzycompute(TemplateCompilationUnit.scala:134)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.generatedSource(TemplateCompilationUnit.scala:132)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.scalaSource(TemplateCompilationUnit.scala:139)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit$TemplateSourceMap.<init>(TemplateCompilationUnit.scala:173)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit.sourceMap(TemplateCompilationUnit.scala:89)
+2015-09-28 11:52:38,959 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.play2.templateeditor.TemplateCompilationUnit.sourceMap(TemplateCompilationUnit.scala:45)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl$$anonfun$1$$anonfun$apply$3.apply(ScalaHoverImpl.scala:117)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl$$anonfun$1$$anonfun$apply$3.apply(ScalaHoverImpl.scala:111)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.compiler.InteractiveCompilationUnit$$anonfun$withSourceFile$1.apply(InteractiveCompilationUnit.scala:202)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.compiler.InteractiveCompilationUnit$$anonfun$withSourceFile$1.apply(InteractiveCompilationUnit.scala:202)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy$$anonfun$internal$1.apply(PresentationCompilerProxy.scala:105)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy$$anonfun$internal$1.apply(PresentationCompilerProxy.scala:104)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at scala.Option.flatMap(Option.scala:171)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:104)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:62)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.core.compiler.InteractiveCompilationUnit$class.withSourceFile(InteractiveCompilationUnit.scala:202)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.editor.CompilationUnit.withSourceFile(CompilationUnit.scala:10)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl$$anonfun$1.apply(ScalaHoverImpl.scala:111)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl$$anonfun$1.apply(ScalaHoverImpl.scala:109)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at scala.Option.map(Option.scala:146)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:109)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:139)
+2015-09-28 11:52:38,960 ERROR [Text Viewer Hover Presenter] - System.err - at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)

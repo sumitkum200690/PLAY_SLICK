@@ -1,0 +1,16 @@
+@(reportees: List[models.EmployeeModel])
+
+@main("MANAGERS WISE REPORTEES") {
+
+<table>
+  
+  @for(repotee <- reportees) {
+    
+    
+
+	
+  	<tr><td><a href="/reporteeDescription/@repotee.id/@repotee.departmentId">@repotee.name</a></td></tr>  
+  }
+  </table>
+
+}

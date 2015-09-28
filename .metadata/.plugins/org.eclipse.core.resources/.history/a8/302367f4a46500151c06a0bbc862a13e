@@ -1,0 +1,161 @@
+@(empDesciprion: List[models.EmployeeModel])
+<head>
+<style>
+
+#maindiv{
+	height:100%;
+	width:100%;
+	
+}
+
+#header{
+	height:7%;
+	width:100%;
+	background-color:black;
+	color:white;
+	text-align:center;
+	
+	
+}
+
+
+#d3{
+	height:93%;
+	width:100%;
+	float:left;
+}
+
+#content{
+	height:95%;
+	width:100%;
+	
+}
+
+#list{
+	height:100%;
+	width:90%;
+	float:left;
+	background-color:white;
+}
+
+#home{
+	height:100%;
+	width:10%;
+	float:left;
+	background-color:white;
+}
+
+#footer{
+	height:5%;
+	width:100%;
+	background-color:black;
+	color:white;
+}
+
+#header2 {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#section {
+    width:100%;
+    float:left;
+    padding:10px;
+     height: 100%;
+     background-color:blue;
+}
+
+#section2 {
+    width:100%;
+    float:left;
+    padding:10px;
+     height: 100%;
+}
+
+#footer2 {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 
+   	
+   margin-bottom: 1px; 
+}
+
+
+   
+   
+</style>
+
+<title>Employee</title>
+</head>
+
+
+
+
+
+
+																
+
+<body style="height: 100%; background-color:white" >
+
+<div id="maindiv">
+
+	<div id="header">
+	
+	<h2>EMPLOYEE DEPARTMENT SYSTEM</h2>
+	</div>
+	
+	<div id="d3">
+	
+		<div id="content">
+		
+			<div id="list">
+				<h2 style="margin-left:50px; color: buttonshadow;  ">LIST OF EMPLOYEES</h2>
+				<table style=" margin-left:20px "  cellspacing="2">
+			  
+			  <tr style="text-align: left;">
+			  <th>&nbsp; &nbsp;</th>
+			  <th>EMPLOYEE ID</th>
+			  <th>EMPLOYEE NAME</th>
+			  <th>DEPARTMENT NAME</th>
+			  <th>Project</th>
+			  <th>EMAIL ID</th>
+			  <th>Contact No.</th>
+			  <th>Address</th>			  
+			  </tr>
+			  
+			  @for(employee <- empDesciprion) {  
+			  
+			
+		
+		         
+				<tr>
+				
+				<td><img src="/assets/images/@employee.id@(".png")" alt="alt text" height="70" width="70" border="1"/></td>
+				
+				<td>@employee.id</td>
+				<td>@employee.name</td>
+				<td>@employee.departmentName</td> 
+				<td>@employee.current_project</td>
+				<td>@employee.email</td>
+				<td>@employee.contact_number</td>
+				<td>@employee.location</td>
+				</tr>			
+				
+			 }
+			  </table>
+				
+			</div>
+			
+			<div id="home" style="float:left;"><a href="/"><h1><b><I>Home</I></b></h1></a></div>
+		
+		</div>
+		
+		
+	
+	</div>
+
+</div>			

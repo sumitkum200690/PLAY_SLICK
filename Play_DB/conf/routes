@@ -6,7 +6,7 @@
 GET   /                           							controllers.Application.index
 
 
-GET   /AlmIndex												controllers.Application.index
+GET   /EDSystem												controllers.Application.index
 
 GET   /AllManagers                							controllers.Application.allManagers
 

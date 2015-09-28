@@ -12,6 +12,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="@(reportees: List[models.EmployeeModel])"/>
 			<item value="play"/>
 			<item value="nav"/>
 			<item value="#nav"/>
@@ -19,7 +20,6 @@
 			<item value="overflow"/>
 			<item value="reporteeDescriptio"/>
 			<item value="ManagerModel"/>
-			<item value="TableQuery[Employees]"/>
 		</list>
 		<list key="replacehistory">
 		</list>
