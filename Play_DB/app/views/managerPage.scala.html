@@ -92,13 +92,6 @@
 
 </head>
 
-
-
-
-
-
-																
-
 <body style="height: 100%; background-color:white" >
 
 <div id="maindiv">
@@ -113,44 +106,37 @@
 		<div id="content">
 		
 			<div id="list">
-				<h2 style="margin-left:100px; color: buttonshadow; ">LIST OF MANAGERS</h2>
-				<table style="margin-left:16px ">
+				<br/><br/><br/><br/><br/><br/>
+				<table style="margin-left:100px ">
 				  
 				  
-				  <tr style="color: buttonshadow;">
-				  <th>&nbsp; &nbsp; </th><th> &nbsp; &nbsp;&nbsp;&nbsp;<h2>Employee  Name</h2></th>
 				  
-				   <th>&nbsp;&nbsp;<h2>Undergoing Projects</h2></th>
-				  <th>&nbsp;&nbsp;<h2>Official Email ID</h2></th>
-				  <th>&nbsp;&nbsp;<h2>Contact No.</h2></th>
-				  <th >&nbsp;&nbsp;<h2>Address</h2></th>
-				  
-				  </tr>
-				  
+				<tr>  
 				  @for(mgr <- managers) {
+				 
+			<td>
 				  	
-				  	
+				<table>  	
 				    
-				<tr >
-				
-				<td><img src="/assets/images/@mgr.id@(".png")" alt="alt text" height="70" width="70" border="1"/></td>
-				<td><a href="/Reportees/@mgr.id"><h3>@mgr.name</h3></a></td> 
-				<td><h3> &nbsp;&nbsp;@mgr.current_project</h3></td>
-				<td><h3> &nbsp;&nbsp;@mgr.email</h3></td>
-				<td><h3> &nbsp;&nbsp;@mgr.contact_number</h3></td>
-				<td><h3>&nbsp;&nbsp; @mgr.location</h3></td>
-				  
-				
+				<img src="/assets/images/@mgr.id@(".png")" alt="alt text" height="170" width="170" border="1"/>
+				<a href="/Reportees/@mgr.id"><h3>@mgr.name</h3>
+				@mgr.current_project<br/>
+				@mgr.email<br/>
+				@mgr.contact_number<br/>
+				@mgr.location<br/>
 				</tr>
+				</table>
 				
-				
+			</td>
 				
 				  }
+				  
+				  </tr>
 				  </table>
 				
 			</div>
 			
-<div id="home" style="float:left;"><a href="/"><h1><b><I><U><img src="/assets/images/home.jpg" alt="HOME" height="70" width="120" border="0"/></U></I></b></h1></a></div>
+<div id="home" style="float:left;"><a href="/"><h1><b><I><U><img src="/assets/images/home.jpg" alt="HOME" height="50" width="90" border="0"/></U></I></b></h1></a></div>
 		
 		</div>
 		

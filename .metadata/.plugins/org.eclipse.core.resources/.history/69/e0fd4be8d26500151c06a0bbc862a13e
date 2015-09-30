@@ -1,0 +1,164 @@
+@(managers: List[models.EmployeeModel])
+<head>
+<style>
+
+#maindiv{
+	height:100%;
+	width:100%;
+	
+}
+
+#header{
+	height:7%;
+	width:100%;
+	background-color:black;
+	color:white;
+	text-align:center;
+	
+	
+}
+
+
+#d3{
+	height:93%;
+	width:100%;
+	float:left;
+}
+
+#content{
+	height:95%;
+	width:100%;
+	
+}
+
+#list{
+	height:100%;
+	width:90%;
+	float:left;
+	background-color:white;
+}
+
+#home{
+	height:100%;
+	width:10%;
+	float:left;
+	background-color:white;
+}
+
+#footer{
+	height:5%;
+	width:100%;
+	background-color:black;
+	color:white;
+}
+
+#header2 {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#section {
+    width:100%;
+    float:left;
+    padding:10px;
+     height: 100%;
+     background-color:blue;
+}
+
+#section2 {
+    width:100%;
+    float:left;
+    padding:10px;
+     height: 100%;
+}
+
+#footer2 {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 
+   	
+   margin-bottom: 1px; 
+}
+
+
+   
+   
+</style>
+
+
+</head>
+
+
+
+
+
+
+																
+
+<body style="height: 100%; background-color:white" >
+
+<div id="maindiv">
+
+	<div id="header">
+	
+	<h2>EMPLOYEE DEPARTMENT SYSTEM</h2>
+	</div>
+	
+	<div id="d3">
+	
+		<div id="content">
+		
+			<div id="list">
+				<br/><br/><br/><br/><br/><br/><br/>
+				<table style="margin-left:100px ">
+				  
+				  
+				  
+				<tr>  
+				  @for(mgr <- managers) {
+				 
+			<td>
+				  	
+				<table>  	
+				    
+				<img src="/assets/images/@mgr.id@(".png")" alt="alt text" height="150" width="150" border="1"/>
+				<a href="/Reportees/@mgr.id"><h3>@mgr.name</h3></a>
+				<h3>@mgr.current_project</h3>
+				<h3>@mgr.email</h3>
+				<h3>@mgr.contact_number</h3>
+				<h3>@mgr.location</h3>
+				</tr>
+				</table>
+				
+			</td>
+				
+				  }
+				  
+				  </tr>
+				  </table>
+				
+			</div>
+			
+<div id="home" style="float:left;"><a href="/"><h1><b><I><U><img src="/assets/images/home.jpg" alt="HOME" height="70" width="120" border="0"/></U></I></b></h1></a></div>
+		
+		</div>
+		
+		<div id="footer2">
+		Copyright © ALM-TEAM
+		</div>
+	
+	</div>
+
+</div>
+
+
+
+
+
+
+
+

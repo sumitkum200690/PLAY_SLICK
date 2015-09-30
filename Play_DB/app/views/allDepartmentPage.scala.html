@@ -115,23 +115,34 @@
 	<div id="content">
 		
 			<div id="list">
-				<h2 style="margin-left:100px; color: buttonshadow; ">List Of Departments</h2>
-				<table style="margin-left:200px ">
-  
+				
+				<br/><br/><br/><br/><br/><br/><br/><br/>
+				<table style="margin-left:140px ">
+  <tr>
  					 @for(dept <- departments) {
-  	
-  	
-    						<tr style="color: buttonshadow;">
-    						<td><a href="/DepartmentWiseManager/@dept.departmentName/@dept.id"><h2>@dept.departmentName</h2></a></td>
-    						<td><img src="/assets/images/@dept.departmentName@(".png")" alt="alt text" height="70" width="200" border="1" style="border-radius: 15px 50px;"/></td>
+  	  	
+    						
+    				<td >
+    					<table>
+    						<tr>
+    							<a href="/DepartmentWiseManager/@dept.departmentName/@dept.id"><img src="/assets/images/@dept.departmentName@(".png")" alt="alt text" height="150" width="180" border="1" style="border-radius: 15px 50px;"/></a>
     						</tr>
+    						<tr>
+    						<a href="/DepartmentWiseManager/@dept.departmentName/@dept.id"><h2>@dept.departmentName</h2></a>
+    						</tr>
+    						</table>
+    				</td>
+    				
+    						
+    						
     
    						}
+   						</tr>
   </table>
 				
 			</div>
 			
-			<div id="home" style="float:left;"><a href="/"><h1><I><U><b><img src="/assets/images/home.jpg" alt="HOME" height="70" width="120"  /></b></U></I></h1></a></div>
+			<div id="home" style="float:left;"><a href="/"><h1><I><U><b><img src="/assets/images/home.jpg" alt="HOME" height="50" width="90"  /></b></U></I></h1></a></div>
 		
 		</div>
 		
